@@ -1,9 +1,7 @@
 FROM debian:stable-slim
 
-# Set an environment variable to simplify the configuration later
 ENV EXTRACFLAGS="-Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores"
 
-# Install dependencies and build the application
 RUN set -eux; \
     apt-get update; \
     apt-get install --no-install-recommends -y \
